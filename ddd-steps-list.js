@@ -1,6 +1,5 @@
 import { LitElement, html, css } from "lit";
 
-// ddd-steps-list-item definition
 class DddStepsListItem extends LitElement {
   static get properties() {
     return {
@@ -21,17 +20,17 @@ class DddStepsListItem extends LitElement {
       }
 
       :host(:last-of-type) .step-circle::after {
-        display: none; /* 🔧 Hide dotted line after last step */
+        display: none; 
       }
 
       .step-wrapper {
         display: flex;
         align-items: flex-start;
-        position: relative; /* 🔧 Needed for the vertical line */
+        position: relative; 
       }
 
       .step-circle {
-        position: relative; /* 🔧 Required to position the ::after line */
+        position: relative;
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
@@ -43,7 +42,7 @@ class DddStepsListItem extends LitElement {
         margin-right: var(--ddd-spacing-4, 16px);
         background-color: #ddd;
         color: #000;
-        flex-shrink: 0; /* 🔧 Prevent shrinking */
+        flex-shrink: 0; 
       }
 
       .step-circle::after {
@@ -55,7 +54,7 @@ class DddStepsListItem extends LitElement {
         width: 2px;
         height: calc(
           100% + var(--ddd-spacing-6, 24px)
-        ); /* 🔧 Line continues downward */
+        );
         background-image: linear-gradient(
           to bottom,
           #ccc 33%,
@@ -63,8 +62,7 @@ class DddStepsListItem extends LitElement {
         );
         background-position: right;
         background-size: 2px 8px;
-        background-repeat: repeat-y; /* 🔧 Creates dotted line */
-      }
+        background-repeat: repeat-y; 
 
       :host([data-primary]) .step-circle {
         background-color: var(--ddd-theme-default-beaverBlue, #1e407c);
@@ -82,14 +80,14 @@ class DddStepsListItem extends LitElement {
         color: var(
           --ddd-theme-default-beaverBlue,
           #1e407c
-        ); /* 🔧 Match visual style */
+        ); 
       }
 
       ::slotted(p) {
         margin-top: 0.5rem;
         margin-bottom: 0;
         line-height: 1.5;
-        color: #333; /* 🔧 Improve readability */
+        color: #333; 
       }
     `;
   }
@@ -121,8 +119,8 @@ class DddStepsList extends LitElement {
     return css`
       :host {
         display: block;
-        max-width: 800px; /* 🔧 Centered layout like the screenshot */
-        margin: 0 auto; /* 🔧 Center horizontally */
+        max-width: 800px;
+        margin: 0 auto;
       }
     `;
   }
