@@ -155,18 +155,5 @@ class DddStepsList extends LitElement {
       }
     });
   }
-
-  updated(changedProps) {
-    if (changedProps.has("dddPrimary")) {
-      const items = this.querySelectorAll("ddd-steps-list-item");
-      items.forEach((item) => {
-        if (this.dddPrimary) {
-          item.setAttribute("data-primary", "");
-        } else {
-          item.removeAttribute("data-primary");
-        }
-      });
-    }
-  }
 }
 customElements.define("ddd-steps-list", DddStepsList);
