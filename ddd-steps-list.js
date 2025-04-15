@@ -27,7 +27,7 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
     this.description = "";
 
     this.x = this.x || {};
-    this.x {
+    this.x = {
       ...this.x,
       header: "Header";
     };

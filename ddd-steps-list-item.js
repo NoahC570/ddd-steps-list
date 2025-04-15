@@ -31,10 +31,9 @@ constructor() {
   this.registerLocalization({
     context: this,
     localesPath:
-      new URL(".locales/ddd-steps-list.ar.jason", import.meta.url).href +
+      new URL(".locales/ddd-steps-list.ar.json", import.meta.url).href +
       "/../",
-    locales: ["ar","es","hi","zh"],
-    
+    locales: ["ar","es","hi","zh"],   
   });
 }
 
