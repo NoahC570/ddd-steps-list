@@ -34,6 +34,9 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
           font-size: 28px;
           margin: 0 0 10px 0;
         }
+        .steps-items {
+          margin-top: 80px;
+        }
       `,
     ];
   }
