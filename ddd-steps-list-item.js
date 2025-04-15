@@ -28,14 +28,6 @@ export class DddStepsListItem extends DDDPulseEffectSuper(I18NMixin(DDD)) {
       ...this.x,
       header: "Header",
     };
-
-    this.registerLocalization({
-      context: this,
-      localesPath:
-        new URL(".locales/ddd-steps-list.ar.json", import.meta.url).href +
-        "/../",
-      locales: ["ar", "es", "hi", "zh"],
-    });
   }
 
   static get properties() {
