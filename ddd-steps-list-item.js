@@ -134,7 +134,7 @@ export class DddStepsListItem extends DDDPulseEffectSuper(I18NMixin(DDD)) {
           <div class="index">
             <div class="count">${this.count}</div>
           </div>
-          <h3>${this.header}</h3>
+          <h3>${this.title}</h3>
         </div>
         <div class="vl">
           <div class="content">

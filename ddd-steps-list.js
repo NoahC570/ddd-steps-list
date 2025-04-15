@@ -47,7 +47,7 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
     this.x = this.x || {};
     this.x = {
       ...this.x,
-      header: "Header",
+      title: "title",
     };
 
     this.registerLocalization({
