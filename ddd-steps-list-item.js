@@ -23,12 +23,13 @@ constructor() {
   this.summary = "";
   this.count = 0 
   this.x = this.x || {};
+
   this.x = {
     ...this.x,
     header = "Header",
   };
   this.registerLocalization({
-    contect: this,
+    context: this,
     localesPath:
       new URL(".locales/ddd-steps-list.ar.jason", import.meta.url).href +
       "/../",

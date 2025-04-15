@@ -22,9 +22,10 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.index = 0 
+    this.index = 0;
     this.header = "";
     this.description = "";
+
     this.x = this.x || {};
     this.x {
       ...this.x,
@@ -38,9 +39,11 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
       locales: ["ar", "es", "hi", "zh"],
     });
   }
+
   static get properties() {
     return {
       ...super.properties,
+      title: {type: String},
       header: { type: String },
       index: { type: Number },
       description: { type: String },
@@ -60,7 +63,7 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
     })
   }
   
-  valdiateChildren() { 
+  validateChildren() { 
     const slot = this.shadowRoot.querySelector("#step-slot");
     if (!slot){
       console.error("Slot #step-slot not found in shadowRoot.");

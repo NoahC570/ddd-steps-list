@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="Description" content="Demonstration for ddd-steps-list">
+
+  <style>
+    p{
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: 400;
+      font-family: Roboto,Arial,Tahoma,sans-serif;
+    }
+
+    :root, html, body {
+      margin: 0;
+      padding: 0;
+    }
+    #demo {
+      margin: var(--ddd-spacing-2);
+    }
+    ddd-steps-list {
+      margin: 0 auto;
+      border: var(--ddd-border-md);
+      border-color: black;
+      border-radius: var(--ddd-radius-lg);
+    }
+    ddd-steps-list:hover {
+      box-shadow: var(--ddd-boxShadow-sm);
+    }
+    #example {
+      --ddd-steps-list-font-size: var(--ddd-font-size-l);
+      background-color: var(--ddd-accent-2);
+      color: var(--ddd-primary-17);
+    }
+  </style>
+  <title>ddd-steps-list</title>
+</head>
+
+<body>
+  <div id="demo">
+    <ddd-steps-list data-primary="2" title="The 2+2 Plan" description="Learn how the 2+2 Plan guides you from application to graduation, with support at every step.">
+        <ddd-steps-list-item data-primary='2' title="Apply to Penn State">
+        <p>When completing your application, choose from our twenty campuses and select a first-choice and an alternate campus.</p>
+
+        <p>you’re enrolling in the 2+2 Plan, there’s no need to reapply when transitioning to your second campus. This streamlined process makes it easy to start at one campus and move seamlessly to another as you progress in your studies.</p>
+        </ddd-steps-list-item>
+        <ddd-steps-list-item title="Enroll at your stating campus" data-primary='2'>
+        <p>Start your journey by completing general education and major prerequisite courses at your initial campus.</p>
+
+        <p>During your first two years, you'll have access to a wide range of opportunities, including student clubs, organizations, and intramural sports, all while learning from expert faculty. This experience will help you build a strong foundation and make the most of your time as a Penn Stater.</p>
+        </ddd-steps-list-item>
+        <ddd-steps-list-item title="Work with your academic advisers" data-primary='2'>
+        <p>In the second semester of your sophomore year, you'll collaborate with your academic adviser to begin the campus transfer process.</p>
+
+        <p>Your adviser will guide you to ensure you're meeting the entrance requirements for your chosen program, as detailed in the <a href="https://bulletins.psu.edu/undergraduate/"> Undergraduate Bulletin </a>. This support helps you stay on track and smoothly transition to your next campus.</p>
+        </ddd-steps-list-item>
+        <ddd-steps-list-item title="Explore the Undergraduate Bulletin" data-primary='2'>
+        <p>At Penn State, you’ll officially enter your major during your junior year.</p>
+        <p>To stay on track, review the entrance to major requirements in the <a href="https://bulletins.psu.edu/undergraduate/">Undergraduate Bulletin</a>. By meeting the entrance to major requirements, you’ll transition smoothly into your chosen field of study. These requirements are consistent, whether you start at the University Park campus or another undergraduate campus.</p>
+        </ddd-steps-list-item>
+        <ddd-steps-list-item title="Transition to your new campus" data-primary='2' noline>
+          <p>You’ll start your junior year at your new campus, continuing your Penn State journey as you work toward graduation.</p>
+          <p>As you approach the finish line, you'll earn your diploma and join the world’s largest alumni network, marking the beginning of your distinguished status as a Penn State graduate.</p>
+        </ddd-steps-list-item>
+
+    </ddd-steps-list>
+    <script type="module" src="./ddd-steps-list.js"></script>
+    <script type="module" src="./ddd-steps-list-item.js"></script>
+</body>
+</html>
