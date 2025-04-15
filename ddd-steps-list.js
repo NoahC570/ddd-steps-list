@@ -19,10 +19,29 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
     return "ddd-steps-list";
   }
 
+  static get styles() {
+    return [
+      super.styles,
+      css`
+        :host {
+          display: block;
+          margin-top: 50px;
+        }
+        .description {
+          padding-left: 20px;
+        }
+        .description h3 {
+          font-size: 28px;
+          margin: 0 0 10px 0;
+        }
+      `,
+    ];
+  }
+
   constructor() {
     super();
     this.index = 0;
-    this.header = "";
+    this.title = "";
     this.description = "";
 
     this.x = this.x || {};
@@ -54,6 +73,10 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
     if (changedProperties.has("title")) {
       this.indexcount();
     }
+  }
+
+  firstUpdated(changedProperties) {
+    this.indexcount();
   }
 
   indexcount() {
