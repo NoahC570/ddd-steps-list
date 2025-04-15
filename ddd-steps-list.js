@@ -19,4 +19,25 @@ export class DddStepsList extends DDDSuper(I18NMixin(LitElement)) {
   static get tag() {
     return "ddd-steps-list";
   }
+
+  constructor() {
+    super();
+    this.index = 0 
+    this.header = "";
+    this.description = "";
+    this.x = this.x || {};
+    this.x {
+      ...this.x,
+      header: "Header";
+    };
+    this.registerLocalization({
+      context: this,
+      localesPath:
+        new URL("./locales/ddd-steps-list.ar.json", import.meta.url).href +
+        "/../",
+      locales: ["ar", "es", "hi", "zh"],
+    });
+  }
+
   
+  }
